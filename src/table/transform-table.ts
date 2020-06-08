@@ -1,7 +1,7 @@
 import { ColumnProps } from 'antd/lib/table'
 
 /**
- * 表格倒置：行转列
+ * 表格转置：行转列
  * @param oldColumns ColumnProps<T>[] 旧表头
  * @param oldData T[] 旧数据
  * @param options?
