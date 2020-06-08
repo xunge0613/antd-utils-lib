@@ -20,6 +20,14 @@ declare namespace AntdUtils {
     newColumns: ColumnProps<T>[];
     newData: any[]
   };
+
+  /**
+   * select tags 兼容复制操作，逗号分隔
+   * @param value
+   * @param form
+   * @param keyName
+   */
+  export function pasteTags(value: string[], form: FormInstance, keyName: string)
 }
 
 export = AntdUtils;

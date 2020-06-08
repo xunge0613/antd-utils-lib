@@ -6,7 +6,10 @@
 // table
 import transformTable from './table/transform-table';
 
+import pasteTags from './select/paste-tags';
+
 export = {
-  transformTable
+  transformTable,
+  pasteTags,
 };
 

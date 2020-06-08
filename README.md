@@ -49,8 +49,8 @@ npm publish
 2. npm引入
 
 ``` javascript
-import AntdUtils from '@antd-utils/m-utils';
-import { transformTable } from '@antd-utils/m-utils';
+import AntdUtils from '@antd-utils';
+import { transformTable } from '@antd-utils';
 ```
 
 ### 编写工具函数
@@ -70,7 +70,7 @@ export = {
 3. 在index.d.ts中添加类型声明， 如
 
 ``` javascript
-declare namespace mUtils {
+declare namespace AntdUtils {
     ...
     export function xxx():void
 }

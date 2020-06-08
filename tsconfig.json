@@ -66,6 +66,9 @@
     "src"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/index.ts",
+    "src/select/index.ts",
+    "src/table/index.ts",
   ]
 }

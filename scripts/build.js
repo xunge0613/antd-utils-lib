@@ -1,7 +1,7 @@
 /*
  * @Description: 构建打包
- * @Author: mzn
- * @Date: 2019-10-11 18:45:08
+ * @Author: Tony.Xu
+ * @Date: 2020年06月08日20:28:35
  */
 const fs = require('fs')
 const path = require('path')
@@ -76,7 +76,7 @@ function blue(str) {
 
 // 处理字符串，头字母大写
 function firstUpperCase(str) {
-  return str.replace(/^\S/,function(s){return s.toUpperCase();});
+  return str.replace(/^\S/, function (s) { return s.toUpperCase(); });
 }
 
 // 导出单个函数
@@ -92,38 +92,37 @@ function buildSingleFn() {
       try {
         const targetPath3 = path.resolve(__dirname, '../', `dist/src/${type}/${fn}`)
         fs.readFile(targetPath3, async (err, data) => {
-            if(err) return;
-            const handleContent = data.toString().replace(/require\(".{1,2}\/[\w\/]+"\)/g, (match) => {
-              // match 为 require("../collection/each") => require("./each")
-              const splitArr = match.split('/')
-              const lastStr = splitArr[splitArr.length - 1].slice(0, -2)
-              const handleStr = `require('./${lastStr}')`
-              return handleStr
-            })
-            const libPath = path.resolve(__dirname, '../', 'lib')
-            await fs.writeFileSync(`${libPath}/${fn}`, handleContent)
-             //单个函数rollup打包到lib文件根目录下
-            let moduleName = firstUpperCase(fn.replace(/.js/,''));
-            let config = {
-              input: path.resolve(__dirname, '../', `lib/${fn}`),
-              plugins: defaultPlugins,
-              external: ['tslib', 'dayjs'],  // 由于函数用ts编写，使用external外部引用tslib，减少打包体积
-              output: {
-                file: `lib/${fn}`,
-                format: 'umd',
-                name: `m${moduleName}`,
-                globals: {
-                  tslib:'tslib',
-                  dayjs: 'dayjs',
-                },
-                banner: '/*!\n' +
-                ` * @author mzn\n` +
+          if (err) return;
+          const handleContent = data.toString().replace(/require\(".{1,2}\/[\w\/]+"\)/g, (match) => {
+            // match 为 require("../collection/each") => require("./each")
+            const splitArr = match.split('/')
+            const lastStr = splitArr[splitArr.length - 1].slice(0, -2)
+            const handleStr = `require('./${lastStr}')`
+            return handleStr
+          })
+          const libPath = path.resolve(__dirname, '../', 'lib')
+          await fs.writeFileSync(`${libPath}/${fn}`, handleContent)
+          //单个函数rollup打包到lib文件根目录下
+          let moduleName = firstUpperCase(fn.replace(/.js/, ''));
+          let config = {
+            input: path.resolve(__dirname, '../', `lib/${fn}`),
+            plugins: defaultPlugins,
+            external: ['tslib'],  // 由于函数用ts编写，使用external外部引用tslib，减少打包体积
+            output: {
+              file: `lib/${fn}`,
+              format: 'umd',
+              name: `m${moduleName}`,
+              globals: {
+                tslib: 'tslib',
+              },
+              banner: '/*!\n' +
+                ` * @author Tony.Xu\n` +
                 ` * @desc ${moduleName}\n` +
                 ' */',
-              }
             }
-            await buildEntry(config);
-          })
+          }
+          await buildEntry(config);
+        })
       } catch (e) {
         logError(e);
       }
