@@ -1,14 +1,14 @@
 import { ColumnProps } from 'antd/lib/table'
 
 /**
- * 表格转置：行转列
+ * 表格倒置：行转列
  * @param oldColumns ColumnProps<T>[] 旧表头
  * @param oldData T[] 旧数据
  * @param options?
  * @returns newColumns, newData 新表头
  */
 // 处理数据，生成新表格字段以及数据格式
-function transformTable<T>(
+export default function transformTable<T>(
   oldColumns: ColumnProps<T>[],
   oldData: T[],
   options?: object,
@@ -25,13 +25,15 @@ function transformTable<T>(
     {
       title: 'title',
       dataIndex: 'title',
-      fixed: true,
+      fixed: 'left' as 'left',
       width: 150,
     },
     // 第二列起，同 dataindex 不同 data 的值
     ...oldData.map((item: T, index: number) => {
       return {
         dataIndex: index,
+        // 需要手动指定 100% 让数据栏充满表格
+        width: '100%',
       }
     }),
   ]
@@ -41,7 +43,7 @@ function transformTable<T>(
       title: oldColumns[index].title, // 第一列
       ...Object.entries(oldData || []) // 遍历键值对
         .map((item, i) => {
-          // console.log(item); // ["0", {"1" : {0: "value", title: "title"}}]
+          // console.log(item); // ["0", {"1" : {0: "string", title: "质检报告编号"}}]
           let value = column.dataIndex && item[1] ? (item[1] as any)[column.dataIndex as string] : undefined
           if (column.render) {
             // render 优先级高于 dataIndex
@@ -60,5 +62,3 @@ function transformTable<T>(
   console.log('new', newColumns, newData)
   return { newColumns, newData }
 }
-
-export = transformTable
