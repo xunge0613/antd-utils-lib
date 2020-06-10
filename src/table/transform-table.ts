@@ -2,10 +2,11 @@ import { ColumnProps } from 'antd/lib/table'
 
 /**
  * 表格倒置：行转列
- * @param oldColumns ColumnProps<T>[] 旧表头
- * @param oldData T[] 旧数据
- * @param options?
- * @returns newColumns, newData 新表头
+ * @description transform table Row into table Col
+ * @param oldColumns ColumnProps<T>[] old columns
+ * @param oldData T[] old dataSource
+ * @param options? 
+ * @returns newColumns, newData 
  */
 // 处理数据，生成新表格字段以及数据格式
 export default function transformTable<T>(
@@ -21,7 +22,7 @@ export default function transformTable<T>(
   // console.log('old', oldColumns, oldData)
   // 转表头
   const newColumns = [
-    // 第一列固定
+    // 第一列固定 fixed first column
     {
       title: 'title',
       dataIndex: 'title',

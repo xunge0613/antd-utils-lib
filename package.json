@@ -28,8 +28,13 @@
     "url": "git+https://github.com/xunge0613/antd-utils-lib"
   },
   "private": false,
-  "keywords": [],
-  "author": "mzn",
+  "keywords": [
+    "antd",
+    "antd-utils",
+    "utils",
+    "react"
+  ],
+  "author": "Tony.Xu",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
