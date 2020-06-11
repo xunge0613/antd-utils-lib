@@ -2,7 +2,13 @@
 
 ## Demo
 
-[表格转置 demo](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table)
+### Table
+
+[表格转置 | Transform Table](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table)
+
+### Select
+
+[复制tags | Paste Tags](https://xunge0613.github.io/antd-utils/demo/src-demos-paste-tags)
 
 ## 编译
 
@@ -44,7 +50,7 @@ npm publish
 
 ## 使用
 
-1. 浏览器直接引入，使用m-utils或者压缩版m-utils-min.js，调用 window.mUtils
+1. 浏览器直接引入，使用 antd-utils 或者压缩版 antd-utils-min.js，调用 window.AntdUtils
 
 2. npm引入
 

@@ -32,7 +32,9 @@
     "antd",
     "antd-utils",
     "utils",
-    "react"
+    "react",
+    "typescript",
+    "helper"
   ],
   "author": "Tony.Xu",
   "license": "MIT",
@@ -74,7 +76,6 @@
     "webpack": "^4.40.2"
   },
   "dependencies": {
-    "dayjs": "^1.8.16",
     "tslib": "^1.10.0"
   },
   "bugs": {
