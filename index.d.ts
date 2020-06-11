@@ -3,6 +3,7 @@
  * @desc 类型声明
  */
 import { ColumnProps } from 'antd/lib/table'
+import { FormInstance } from 'antd/lib/form';
 
 declare namespace AntdUtils {
   /**
@@ -23,11 +24,20 @@ declare namespace AntdUtils {
 
   /**
    * select tags 兼容复制操作，逗号分隔
-   * @param value
-   * @param form
-   * @param keyName
+   * @description paste or input string with ',' into <Select> in tags mode
+   * @param value onChange(value)
+   * @param form the form instance
+   * @param keyName the Form.Item name 
    */
   export function pasteTags(value: string[], form: FormInstance, keyName: string)
+
+  /**
+   * enum2options
+   * @description Convert TS enum into Select.Options
+   * @param object enum value 
+   * @returns [] options
+   */
+  export function enum2Options(enumObj: object, labelName: string = 'label', valueName: string = 'value')
 }
 
 export = AntdUtils;

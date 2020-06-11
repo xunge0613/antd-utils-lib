@@ -1,5 +1,5 @@
 /**
- * enum2option
+ * enum2options
  * @description Convert TS enum into Select.Options
  * @param object enum value 
  * @returns [] options
