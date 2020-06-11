@@ -1,6 +1,6 @@
 {
   "name": "antd-utils",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "antd-utils",
   "main": "lib/antd-utils-min.js",
   "module": "lib/antd-utils-esm.js",
