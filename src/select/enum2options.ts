@@ -11,8 +11,8 @@ function enum2Options(enumObj: object, labelName: string = 'label', valueName: s
   return (Object.keys(enumObj)
     .filter(key => isNaN(Number(key))) || [])
     .map(key => ({
-      [labelName]: enumObj[key],
-      [valueName]: key
+      [labelName]: key,
+      [valueName]: enumObj[key]
     }))
 }
 
