@@ -1,6 +1,6 @@
 # Antd Utils
 
-## 版本
+## 功能概览
 
 | 名称 | 方法名 | 类型 | demo | 稳定版本 |
 | :--: |  :--: | :--: | :--: | :--: |
@@ -114,4 +114,4 @@ npm run publish:premajor
 Feel free to raise issues and contact me
 
 github: [https://github.com/xunge0613](https://github.com/xunge0613)
-weibo: @徐迅爱上大
+weibo: [@徐迅爱上大](https://weibo.com/xxdalston)

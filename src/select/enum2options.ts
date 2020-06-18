@@ -4,7 +4,7 @@
  * @param object enum value 
  * @returns [] options
  */
-function enum2Options(enumObj: object, labelName: string = 'label', valueName: string = 'value') {
+function enum2Options(enumObj: object, labelName: string = 'label', valueName: string = 'value'): { [x: string]: any; }[] {
   if (!enumObj) {
     return [];
   }

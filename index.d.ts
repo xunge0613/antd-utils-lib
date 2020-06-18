@@ -37,7 +37,18 @@ declare namespace AntdUtils {
    * @param object enum value 
    * @returns [] options
    */
-  export function enum2Options(enumObj: object, labelName: string = 'label', valueName: string = 'value')
+  export function enum2Options(
+      enumObj: object, 
+      labelName: string = 'label', 
+      valueName: string = 'value') : { [x: string]: any; }[]
+
+  /**
+   * getQueryString
+   * @description getQueryString
+   * @param name string
+   * @returns null | string
+   */
+  export function getQueryString(name: string) : null | string
 }
 
 export = AntdUtils;
