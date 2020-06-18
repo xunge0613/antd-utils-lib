@@ -7,7 +7,7 @@
 | 表格转置 | transformTable | Table | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table) | 0.1.5 |
 | 复制 tags | pasteTags |  Select | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-paste-tags) | 0.1.5 |
 | TS 枚举转 select options | enum2Options | Select | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table) | 0.1.5 |
-| 获取 url 参数 | getQueryString |  Utils | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-get-querystring.ts) | 0.1.6 |
+| 获取 url 参数 | getQueryString |  Utils | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-get-querystring/) | 0.1.9 |
 
 ## 编译
 

@@ -4,7 +4,7 @@
  * @returns string | null
  */
 export default function getQueryString(name: string): string | null {
-  const match = location.search.substring(1).match(new RegExp(`/(^|&)${name}=([^$&]*)(&|$)/i`))
+  const match = location.search.substring(1).match(new RegExp(`(^|&)${name}=([^$&]*)(&|$)`, 'i'))
   if(match !== null) {
     return unescape(match[2]);
   }  
