@@ -1,14 +1,13 @@
 # Antd Utils
 
-## Demo
+## 版本
 
-### Table
-
-[表格转置 | Transform Table](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table)
-
-### Select
-
-[复制tags | Paste Tags](https://xunge0613.github.io/antd-utils/demo/src-demos-paste-tags)
+| 名称 | 方法名 | 类型 | demo | 稳定版本 |
+| :--: |  :--: | :--: | :--: | :--: |
+| 表格转置 | transformTable | Table | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table) | 0.1.5 |
+| 复制 tags | pasteTags |  Select | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-paste-tags) | 0.1.5 |
+| TS 枚举转 select options | enum2Options | Select | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-transform-table) | 0.1.5 |
+| 获取 url 参数 | getQueryString |  Utils | [文档](https://xunge0613.github.io/antd-utils/demo/src-demos-get-querystring.ts) | 0.1.6 |
 
 ## 编译
 
@@ -48,16 +47,24 @@ npm run dev:esm
 npm publish
 ```
 
-## 使用
+## Getting Started 开始使用
 
-1. 浏览器直接引入，使用 antd-utils 或者压缩版 antd-utils-min.js，调用 window.AntdUtils
-
-2. npm引入
+1. Using npm (Recomended)
 
 ``` javascript
+
 import AntdUtils from '@antd-utils';
+// or
 import { transformTable } from '@antd-utils';
+
 ```
+
+2. Using `<script>`
+
+Direct import using `<script>`, use `antd-utils.js` or compressed version `antd-utils-min.js`, call `window.AntdUtils.xxx`
+
+浏览器直接引入，使用 `antd-utils.js` 或者压缩版 `antd-utils-min.js`，调用 `window.AntdUtils.xxx`
+
 
 ### 编写工具函数
 
@@ -101,3 +108,10 @@ npm run publish:premajor
 ## 鸣谢
 
 打包构建基于 @ghfengye 的 [https://github.com/ghfengye/mutils](https://github.com/ghfengye/mutils)
+
+## Contact
+
+Feel free to raise issues and contact me
+
+github: [https://github.com/xunge0613](https://github.com/xunge0613)
+weibo: @徐迅爱上大
