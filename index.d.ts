@@ -37,13 +37,15 @@ declare namespace AntdUtils {
    * enum2options
    * @description Convert TS enum into Select.Options
    * @param object enum value 
+   * @param labelName? default `label`
+   * @param valueName? defalut `value`
    * @returns [] options
    * @author Tony.Xu https://github.com/xunge0613
    */
   export function enum2Options(
       enumObj: object, 
-      labelName: string, 
-      valueName: string) :
+      labelName?: string, 
+      valueName?: string) :
        { [x: string]: any; }[]
 
   /**

@@ -26,11 +26,11 @@ export default function calcRowspanToMerge<T extends { [propName: string]: any }
       saveCount = 1
       continue
     }
-    if (saveId !== element.propName) {
+    if (saveId !== element[propName]) {
       // 与前一项不同，先记录前一存档点信息，
       rowSpanMapping[saveIndex] = saveCount
       // 重新初始化
-      saveId = element.propName
+      saveId = element[propName]
       saveIndex = index
       saveCount = 1
     } else {
