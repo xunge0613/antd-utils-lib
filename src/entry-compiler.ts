@@ -1,10 +1,11 @@
 /**
- * @author Tony.Xu
+ * @author Tony.Xu https://github.com/xunge0613
  * @desc 导出全部函数
  */
 
 // table
 import transformTable from './table/transform-table';
+import calcRowspanToMerge from './table/calc-rowspan-to-merge';
 
 // select
 import pasteTags from './select/paste-tags';
@@ -16,6 +17,7 @@ import getQueryString from './utils/get-querystring';
 export = {
   // table
   transformTable,
+  calcRowspanToMerge,  // 计算需要纵向合并相邻的重复单元格
   // select
   pasteTags,
   enum2Options,

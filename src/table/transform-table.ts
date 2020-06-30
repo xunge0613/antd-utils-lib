@@ -7,6 +7,7 @@ import { ColumnProps } from 'antd/lib/table'
  * @param oldData T[] old dataSource
  * @param options? 
  * @returns newColumns, newData 
+ * @author Tony.Xu https://github.com/xunge0613
  */
 // 处理数据，生成新表格字段以及数据格式
 export default function transformTable<T>(
