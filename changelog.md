@@ -2,7 +2,7 @@
 
 ## 功能规划
 
-## v 0.1.12
+## v 0.1.13
 
 - Utils
   - 新增功能：[页面进入或离开触发回调函数](https://xunge0613.github.io/antd-utils/demo/src-demos-handle-visibility-change/)
