@@ -13,6 +13,7 @@ import enum2Options from './select/enum2options';
 
 // utils
 import getQueryString from './utils/get-querystring';
+import handleVisibilityChange from './utils/handle-visibility-change';
 
 export = {
   // table
@@ -23,5 +24,6 @@ export = {
   enum2Options,
   // utils
   getQueryString,
+  handleVisibilityChange,
 };
 
